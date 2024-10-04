@@ -6,13 +6,56 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.min.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
     <title>Utube</title>
+    <style>
+        .active{
+            background-color: green;
+            color: white;
+        }
+    </style>
 </head>
-<body>
+<body class="w-10/12 mx-auto">
+    <header class=>
+        <div class="flex justify-between items-center py-2 border-b">
+           <div class="w-[100px]"><img src="./assets/logo.jpg" alt="" srcset="">
+           </div>
+           <div class="form-control">
+            <input id="search-input" type="text" placeholder="Search" class="input input-bordered " />
+          </div>
+          <div>
+            <button class="btn">Sort</button>
+          </div>
+        </div>
+    </header>
+    <main>
+        <!-- show category -->
+        <div id="category-container" class="py-2 gap-3 flex items-center justify-center"></div>
+
+        <!-- show videos -->
+        <div id="videos" class="py-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+
+        </div> 
+        <!-- Show Modal -->
+        <button id="showModalData" class="btn hidden" onclick="customModal.showModal()">
+            open modal
+          </button>
+          <dialog id="customModal" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+              <div id="modal-content">
+      
+              </div>
+              <div class="modal-action">
+                <form method="dialog">
+                  <!-- if there is a button in form, it will close the modal -->
+                  <button class="btn">Close</button>
+                </form>
+              </div>
+            </div>
+          </dialog>
+    </main>
+
     
 
 
-
-
-    <script src="index.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>
